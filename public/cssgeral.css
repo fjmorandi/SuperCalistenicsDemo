@@ -1,0 +1,258 @@
+.apresentacao {
+    height: 400px;
+    display: flex;
+    background-image: url(../images/fundo1Calistenia.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.apresentacao h1 {
+    margin: 0 auto 30px auto;
+    align-self: flex-end;
+    font-family: serif;
+    font-weight: bolder;
+    font-size: 60px;
+    font-style: italic;
+    text-decoration: underline;
+    border: 6px solid black;
+    border-radius: 25px;
+    padding: 12px;
+    box-shadow: 0 0 15px 10px rgba(240, 240, 240, 0.8);
+    background: rgba(240, 240, 240, 0.8);
+}
+
+.menuPrincipal {
+    background-color: black;
+    color: white;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-evenly;
+    padding: 5px 0;
+}
+
+.menuPrincipal a {
+    text-decoration: none;
+    color: white;
+}
+
+.conteudo {
+    font-size: 22px;
+    max-width: 1400px;
+    margin: 0 11vw;
+    background-color: white;
+    padding: 70px 4vw;
+    box-shadow: 0 0 30px 5px green;
+}
+
+h2 {
+    text-align: center;
+    font-size: 55px;
+    margin: 0 0 70px 0
+}
+
+.indice {
+    margin-left: 100px;
+}
+
+.conteudo p {
+    padding-inline-start: 10px;
+    text-indent: 35px;
+    font-size: 26px;
+}
+
+
+.indice>p {
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.indice ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.indice li {
+    margin-bottom: 5px;
+    font-size: 32;
+
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: normal;
+    background: white;
+    border-bottom: 2px solid red;
+    line-height: 5px;
+    margin: 25px 0 50px 0;
+}
+
+h3 span {
+    font-size: inherit;
+    background: white;
+}
+
+h3 span::after {
+    content: "x";
+    color: transparent;
+}
+
+h3 span::before {
+    content: "x";
+    color: transparent;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+
+.images div {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.images img,
+.nome img {
+    height: 320px; 
+    text-align: center;
+    align-self: center;
+    max-width: 80%;
+    height: auto;
+}
+
+
+
+.nome {
+    display: flex;
+    max-width: 100vw;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+
+.nome p {
+    max-width: 550px;
+    align-self: center;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    place-content: center center;
+    margin-top: 90px;
+}
+
+.galeria>div {
+    height: 280px;
+    text-align: center;
+    overflow: hidden
+}
+
+.galeria img {
+    height: 280px;
+    width: 440px;
+    object-fit: fill;
+    border-radius: 17px;
+}
+
+.galeria>div::after {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: rgba(10, 10, 10, 0.0);
+    display: block;
+    border-radius: 17px;
+    box-shadow: none;
+    transition: all 0.4s;
+}
+
+.galeria>div:hover::after {
+    transform: translateY(-31px);
+    background: rgba(10, 10, 10, 0.8);
+    box-shadow: 0 -5px 5px rgba(10, 10, 10, 0.8)
+}
+
+.galeria>div:nth-child(1)::after {
+    content: "Pistol squat"
+}
+
+.galeria>div:nth-child(2)::after {
+    content: "Skin the cat"
+}
+
+.galeria>div:nth-child(3)::after {
+    content: "Tuck planche"
+}
+
+.galeria>div:nth-child(4)::after {
+    content: "Straddle Planche"
+}
+
+.galeria>div:nth-child(5)::after {
+    content: "Muscle up"
+}
+
+.galeria>div:nth-child(6)::after {
+    content: "Front lever"
+}
+
+.galeria>div:nth-child(7)::after {
+    content: "Elbow lever"
+}
+
+.galeria>div:nth-child(8)::after {
+    content: "One arm push up"
+}
+
+@media(max-width:1200px) {
+    .nome {
+        flex-wrap: wrap;
+    }
+
+    .nome img {
+        max-width: 100%;
+        width: auto;
+    }
+}
+
+@media(max-width:750px) {
+    .apresentacao {
+        height: 250px
+    }
+
+    .menuPrincipal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menuPrincipal>* {
+        padding: 2px 0 2px 0;
+    }
+
+    .conteudo {
+        margin: 0 40px
+    }
+
+    .indice {
+        margin: 0
+    }
+
+    h3 {
+        line-height: normal;
+        text-align: center;
+    }
+}
